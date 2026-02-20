@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PharmaGuard - Precision Medicine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🧬 PharmaGuard</h1>
+  <p>Pharmacogenomic Risk Prediction System</p>
+
+  <form id="uploadForm">
+    <input type="file" name="vcf" accept=".vcf" required>
+    <input type="text" name="drug" placeholder="Enter Drug (e.g. CODEINE)" required>
+    <button type="submit">Analyze</button>
+  </form>
+
+  <div id="resultSection">
+    <h2>Result</h2>
+    <pre id="result"></pre>
+    <button onclick="copyResult()">Copy JSON</button>
+    <button onclick="downloadResult()">Download JSON</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
